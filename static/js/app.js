@@ -1,9 +1,11 @@
+var URL = "https://raw.githubusercontent.com/sarahgrant11/plotly-challenge/master/data/samples.json"
+
 function init() {
     // Grab a reference to the dropdown select element
     var dropdown = d3.select("#selDataset");
- //pull all IDs from names
+    //pull all IDs from names
  
-    d3.json(url).then(function (IDs) {
+    d3.json(URL).then(function (IDs) {
         var IDs = IDs.names;
         IDs.forEach((id) => {
             dropdown
@@ -23,7 +25,7 @@ function init() {
 
 //Populate the Demographic Info section based on selected ID
 function buildDemos(ID) {
-    d3.json(url).then(function (data) {
+    d3.json(URL).then(function (data) {
     var metadata = data.metadata;
     //filter to get metadata for passed ID
     var filteredDemo = metadata.filter(metadataID => metadataID.id == ID)[0];
@@ -38,7 +40,7 @@ function buildDemos(ID) {
 };
 
 function buildPlots(ID) {
-    d3.json(url).then(function(plotData) {
+    d3.json(URL).then(function(plotData) {
         //filter samples data to ID for plotting
         var samplePlot = plotData.samples.filter(plotID => plotID.id == ID)[0];
         //console.log(samplePlot);
