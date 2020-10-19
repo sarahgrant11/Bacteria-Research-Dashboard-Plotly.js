@@ -4,7 +4,7 @@ const url = "https://raw.githubusercontent.com/sarahgrant11/plotly-challenge/mas
 function getPlots(id) {
 // Get all plots for a particular ID
 
-d3.json("samples.json").then(function(data){
+d3.json("https://raw.githubusercontent.com/sarahgrant11/plotly-challenge/master/data/samples.json").then(function(data){
     console.log(data)
     var filter_data = data.samples.filter(sample => sample.id.toString()===id)[0]
     var ids = filter_data.otu_ids;
