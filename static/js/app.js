@@ -65,7 +65,7 @@ function buildPlots(ID) {
         var barData = [traceBar];
 
         var barLayout = {
-            title: 'Top 10 Microbes (OTUs) Found',
+            title: '10 Most Common Microbes Found',
             showlegend: false,
             width: 600,
             height: 400
@@ -92,8 +92,8 @@ function buildPlots(ID) {
         var bubbleData = [traceBubble];
 
         var bubbleLayout = {
-            title: "Top 10 Microbes Bubble Chart",
-            x: "OTU ID",
+            title: "What's In A Belly Button?",
+            xlabel: "Microbe ID",
             pointStyle: "circle"
         }
 
@@ -108,7 +108,7 @@ function buildPlots(ID) {
         var traceGauge = {
             domain: { x: [0, 1], y: [0, 1] },
             value: washFreq,
-            title: { text: 'Bellybutton WashFrequency'},
+            title: { text: 'Belly Button Wash Frequency'},
             type: "indicator",
             mode: "gauge+number",
             gauge: {
