@@ -11,7 +11,7 @@ According to findings by North Carolina State University's Public Science Lab, a
 [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/) 
 Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable.
 
-# Visualizations Using D3, Plotly
+## Visualizations Using D3, Plotly
 
 * Used the D3 library to read in `samples.json`.
 * Created a horizontal bar chart with a dropdown menu to display the Top 10 OTUs found in a given individual.
